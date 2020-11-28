@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+      <head>
+            <title>SAMPLE FORM</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+          <script type="text/javascript">
+
+          $(document).ready(function(){ 
+          $("#submit").click(function(){
+          
+            
+           var name=$("#name").val();
+           var lastname=$("#lastname").val();
+ 
+           var gender=$('input[name="gender"]:checked').val();
+           var dob=$("#dob").val();
+
+           var qualification=$("#qualification").val();
+            
+
+           var text="";
+           $('.chkbx:checked').each(function(){
+           text+=$(this).val()+',';
+});
+           var ddselect=$("#ddselect").val();
+           var phonenumber=$("#phonenumber").val();
+
+           var mail=$("#mail").val();
+           var experience=$("#experience").val();
+
+          $("#textarea").val("Name of Applicant  : "+name+"\n"+"Applicant Last Name  :"+lastname+"\n"+"gender  :"+gender+"\n"+"Date Of Birth  :"+dob+"\n"+"qualification  :"+qualification+"\n"+"skills  :"+text+"\n"+"phonenumber  :"+ddselect+phonenumber+"\n"+"mail  :"+mail+"\n"+"experience  :"+experience); 
+          
+           
+
+}); 
+});                                      
+          </script>
+      </head>
+      <body>
+            <form>
+            <h1>Data Entry Form</h1>
+                <table>
+                  <tr>
+                       <td>
+                         Name :
+                       </td>
+                       <td>
+                          <input type="text"id="name">
+                     
+                       </td>
+                   </tr>
+                   <tr>
+                       <td>
+                         Last Name:
+                       </td>
+                       <td>
+                          <input type="text"id="lastname">
+                     
+                       </td>
+                   </tr>
+                   <tr>
+                       <td>
+                         Gender :
+                       </td>
+                       <td>
+                          <input type="radio" value=male name="gender">Male
+                          <input type="radio" value=female  name="gender">Female
+                     
+                       </td>
+                   </tr>
+                   <tr>
+                       <td>
+                         Date Of Birth:
+                       </td>
+                       <td>
+                          <input type="date" id="dob">
+                     
+                       </td>
+                   </tr>
+                   <tr>
+                       <td>
+                         Qualification :
+                       </td>
+                       <td>
+                          <input type="text" name=""id="qualification">
+                     
+                       </td>
+                   </tr>
+                   <tr>
+                       <td>
+                         Skills:
+                       </td>
+                       <td>
+                          <input type="checkbox" class="chkbx" value="Java">Java
+                          <br>
+                          <input type="checkbox" class="chkbx" value="DotNet">DotNet
+                          <br>
+                          <input type="checkbox" class="chkbx" value="AngularJs">AngularJs
+                          <br>
+                          <input type="checkbox" class="chkbx" value="SQL">SQL
+                          <br>
+                     
+                       </td>
+                   </tr>
+                   <tr>
+                       <td>
+                         phone no :
+                       </td>
+                       <td>
+                          <select id="ddselect">
+                             <option>+91</option>
+                             <option>97</option>
+                             <option>98</option>
+                             <option>99</option>
+                             <option>87</option>
+                             <option>88</option>
+                             <option>89</option>
+                          </select>
+                          <input type="phone" placeholder="978828***" id="phonenumber">
+                     
+                       </td>
+                   </tr>
+                   <tr>
+                       <td>
+                         E-Mail:
+                       </td>
+                       <td>
+                          <input type="mail" name="" id="mail">
+                     
+                       </td>
+                   </tr>
+                   <tr>
+                       <td>
+                         Experience:
+                       </td>
+                       <td>
+                          <input type="text" name="" id="experience">
+                     
+                       </td>
+                   </tr>
+                </table>
+             </form><br>
+
+<button type="button" id="submit">submit</button><br><br>
+<textarea rows="25" cols="65" id ="textarea"></textarea>
+         </body>
+</html>
